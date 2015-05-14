@@ -1,0 +1,85 @@
+/*
+  Stylesheet for DCE Calendar Generator
+  July 12, 2011
+*/
+
+/* Styling for Each calendar Table */
+.calendar {
+  border: 1px solid #CCC;
+  font-size: 12px;
+  font-family: Arial, Helvetica, Sans-serif;
+  float: left;
+  margin: 20px;
+}
+.calendar th {
+  font-size: 20px;
+  padding: 10px;
+}
+.calendar td {
+  height: 30px;
+  border-top: 1px solid #CCC;
+  border-left: 1px solid #CCC;
+  vertical-align: top;
+  text-align: center;
+  width: 40px;
+}
+.calendar td:first-child {
+  border-left: none;
+}
+.calendar tr.calendar-week td {
+  font-weight: bold;
+  height: 20px;
+  vertical-align: center;
+}
+
+/* Styling for specific Days */
+.recital {
+  background-color: #AFA;
+}
+.danceClass {
+  background-color: #FAA;
+}
+.noClass {
+  color: #F00;
+  font-weight: bold;
+}
+.welcomeDinner {
+  background-color: #AAF;
+}
+.rehearsal {
+  background-color: #FFA;
+}
+
+/* Styling for Legend */
+.calendar-legend {
+  float: left;
+  clear: left;
+  margin: 20px;
+  font-family: Arial, Helvetica, Sans-serif;
+  font-size: 12px;
+}
+.calendar-legend-key {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-right: 5px;
+  border: 1px solid #CCC;
+}
+.calendar-legend-value {
+  float: left;
+  height: 20px;
+  width: 190px;
+  padding-top: 3px;
+}
+.calendar-legend-key:nth-child(7n+7) {
+  clear: left;
+}
+
+/* Styling for Specific Legend items */
+.calendar-legend .noClass + .calendar-legend-value {
+  color: #F00;
+  font-weight: bold;
+}
+.calendar-legend .noClass {
+  border: none;
+}

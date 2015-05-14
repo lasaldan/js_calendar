@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="calendar.js"></script>
+	<script>
+    var oneMonth = [
+      { date: '2011-06-03', event: 'welcomeDinner'},
+      { date: '2011-06-07', event: 'danceClass'},
+      { date: '2011-06-14', event: 'danceClass'},
+      { date: '2011-06-21', event: 'danceClass'},
+      { date: '2011-06-09', event: 'danceClass'},
+      { date: '2011-06-16', event: 'danceClass'},
+      { date: '2011-06-23', event: 'noClass'},
+      { date: '2011-06-24', event: 'rehearsal'},
+      { date: '2011-06-28', event: 'recital'}
+    ];
+
+  
+  var twoMonths = [
+    { date: '2011-05-10', event: 'danceClass' },
+    { date: '2011-05-17', event: 'danceClass' },
+    { date: '2011-05-24', event: 'danceClass' },
+    { date: '2011-05-31', event: 'danceClass' },
+    { date: '2011-05-09', event: 'welcomeDinner' },
+    { date: '2011-06-07', event: 'noClass' },
+    { date: '2011-06-14', event: 'danceClass' },
+    { date: '2011-06-21', event: 'danceClass' },
+    { date: '2011-06-16', event: 'danceClass' },
+    { date: '2011-06-23', event: 'rehearsal'},
+    { date: '2011-06-24', event: 'recital'}
+    ];
+    
+  var legend = [
+    { key: 'welcomeDinner', value: 'Welcome Dinner - 5:30 pm' },
+    { key: 'danceClass', value: 'Weekly Class - 5:00 pm' },
+    { key: 'rehearsal', value: 'Dress Rehearsal - 5:00 pm' },
+    { key: 'recital', value: 'Final Recital - 7:00 pm' },
+    { key: 'noClass', value: 'No Class on Red Days' }
+  ];
+  
+  function wideLegend() {
+    document.getElementById('stylesheet').href = 'style2.css';
+  }
+  function tallLegend() {
+    document.getElementById('stylesheet').href = 'style.css';
+  }
+	</script>
+  <link rel="stylesheet" href="style.css" id="stylesheet"/>
+</head>
+
+<body>
+  <input type="button" value="Single Month (No Legend)" onclick="generateCalendar({dates: oneMonth, target: 'calendar'})" />
+  <input type="button" value="Single Month (Legend)" onclick="generateCalendar({dates: oneMonth, legend: legend, target: 'calendar'})" />
+  <input type="button" value="Two Months (No Legend)" onclick="generateCalendar({dates: twoMonths, target: 'calendar'})" />
+  <input type="button" value="Two Months (Legend)" onclick="generateCalendar({dates: twoMonths, legend: legend, target: 'calendar'})" />
+  <input type="button" value="Set Legend Horizontal" onclick="wideLegend()" />
+  <input type="button" value="Set Legend Vertical" onclick="tallLegend()" />
+	<div id="calendar"></div>
+</body>
+
+</html>
