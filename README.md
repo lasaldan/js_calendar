@@ -1,4 +1,4 @@
-# Javascript Calendar
+# Javascript Calendar - No dependencies
 Generates HTML to display a simple events calendar. Also includes a legend.
 
 ## Screenshots
